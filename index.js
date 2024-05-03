@@ -1,5 +1,5 @@
 import { schedule } from 'node-cron'
-// import { useSitemap } from './utils/sitemapHelper.js'
+import { createOneUrlArr, useSitemap } from './utils/sitemapHelper.js'
 import { baiduSubmit } from './utils/baidu.js'
 import { config } from './utils/config.js'
 (async () => {
@@ -9,8 +9,9 @@ import { config } from './utils/config.js'
     //   url: config.SITEMAP_URL
     // })
     // console.log(urls)
+
     // 仅提交首页
-    const HOME_PAGE = Array(config.BAIDU_LIMIT).fill(config.HOME_PAGE_URL)
+    const HOME_PAGE = createOneUrlArr(config.HOME_PAGE_URL, config.BAIDU_LIMIT)
 
     // 提交链接
     const res = await baiduSubmit({

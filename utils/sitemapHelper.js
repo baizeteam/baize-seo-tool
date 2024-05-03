@@ -62,3 +62,13 @@ export async function useSitemap(options) {
     console.log(_e)
   }
 }
+
+/**
+ * 创建单url数组
+ * @param {*} url 地址
+ * @param {*} limit 额度
+ * @returns 
+ */
+export function createOneUrlArr(url, limit) {
+  return Array(limit).fill(url)
+}

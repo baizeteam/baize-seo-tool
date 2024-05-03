@@ -9,6 +9,6 @@
 ```
 SITE_URL=https://baize.plume.vip
 SITEMAP_URL=https://baize.plume.vip/sitemap.xml
-BAIDU_TOKEN=CO9ijQgYIoEQXJmr
+BAIDU_TOKEN=你的token
 HOME_PAGE_URL=https://baize.plume.vip
 ```

@@ -2,6 +2,18 @@ import { schedule } from 'node-cron'
 import { createOneUrlArr, useSitemap } from './utils/sitemapHelper.js'
 import { baiduSubmit } from './utils/baidu.js'
 import { config } from './utils/config.js'
+import express from "express";
+
+const app = express();
+
+app.get("/", (req, res) => {
+	res.end("baize-seo-tool");
+});
+
+app.listen(3000, ()=>{
+  console.log('listen:3000')
+});
+
 (async () => {
   async function job() {
     // 解析sitemap里的地址
@@ -26,3 +38,5 @@ import { config } from './utils/config.js'
   // 配置每天0点执行提交，配置语法和 linux cron表达式一致
   schedule("0 0 * * *", job)
 })()
+
+export default app;

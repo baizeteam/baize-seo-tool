@@ -20,7 +20,7 @@ import { baiduSubmit } from './utils/baidu.js'
     console.log(res)
   }
   job()
-  // console.log("定时任务开启")
+  console.log("定时任务开启")
   // 配置每天0点执行提交，配置语法和 linux cron表达式一致
-  // schedule("0 0 * * *", job)
+  schedule("0 0 * * *", job)
 })()

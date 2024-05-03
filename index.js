@@ -1,6 +1,7 @@
 import { schedule } from 'node-cron'
 // import { useSitemap } from './utils/sitemapHelper.js'
 import { baiduSubmit } from './utils/baidu.js'
+import { config } from './utils/config.js'
 (async () => {
   async function job() {
     // 解析sitemap里的地址

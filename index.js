@@ -10,8 +10,11 @@ app.get("/", (req, res) => {
 	res.end("baize-seo-tool");
 });
 
-app.listen(3000, ()=>{
-  console.log('listen:3000')
+const port = process.env.PORT || 3000
+const host = process.env.HOST || ''
+
+app.server = app.listen(port, host, () => {
+  console.log(`server running @ http://${host ? host : 'localhost'}:${port}`)
 });
 
 (async () => {

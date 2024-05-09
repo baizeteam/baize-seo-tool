@@ -10,8 +10,9 @@ export async function baiduSubmit({ urls, siteUrl, token }) {
       }
     })
     console.log('提交成功', urls)
+    console.log(_res.data)
   } catch (_e) {
     _res = _e.response
   }
-  return _res?.data
+  return _res.data
 }

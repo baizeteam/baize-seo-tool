@@ -7,7 +7,7 @@ import express from "express";
 const app = express();
 
 app.get("/", (req, res) => {
-	res.end("baize-seo-tool");
+  res.end("baize-seo-tool");
 });
 
 const port = process.env.PORT || 3000
@@ -38,8 +38,8 @@ app.server = app.listen(port, host, () => {
   }
   job()
   console.log("定时任务开启")
-  // 配置每天0点执行提交，配置语法和 linux cron表达式一致
-  schedule("0 0 * * *", job)
+  // 配置每天1点执行提交，配置语法和 linux cron表达式一致
+  schedule("0 1 * * *", job)
 })()
 
 export default app;

@@ -70,5 +70,5 @@ export async function useSitemap(options) {
  * @returns 
  */
 export function createOneUrlArr(url, limit) {
-  return Array(limit).fill(url)
+  return Array(+limit).fill(url)
 }
